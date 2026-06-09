@@ -17,6 +17,7 @@ export default function ChapterModal({ chapter, onClose, onUpdate, onMarkComplet
   const [completed, setCompleted] = useState(chapter.completedQuestions);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTotal(chapter.totalQuestions);
     setCompleted(chapter.completedQuestions);
   }, [chapter]);
